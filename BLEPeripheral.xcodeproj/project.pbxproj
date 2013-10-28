@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF121FE2181EB28A0078EF49 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF121FE1181EB28A0078EF49 /* IOBluetooth.framework */; };
 		AFE86A80181EB226001E1827 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE86A7F181EB226001E1827 /* Cocoa.framework */; };
 		AFE86A8A181EB226001E1827 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFE86A88181EB226001E1827 /* InfoPlist.strings */; };
 		AFE86A8C181EB226001E1827 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE86A8B181EB226001E1827 /* main.m */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF121FE1181EB28A0078EF49 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
 		AFE86A7C181EB226001E1827 /* BLEPeripheral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEPeripheral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE86A7F181EB226001E1827 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AFE86A82181EB226001E1827 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF121FE2181EB28A0078EF49 /* IOBluetooth.framework in Frameworks */,
 				AFE86A80181EB226001E1827 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +98,7 @@
 		AFE86A7E181EB226001E1827 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF121FE1181EB28A0078EF49 /* IOBluetooth.framework */,
 				AFE86A7F181EB226001E1827 /* Cocoa.framework */,
 				AFE86A9E181EB226001E1827 /* XCTest.framework */,
 				AFE86A81181EB226001E1827 /* Other Frameworks */,
@@ -465,6 +469,7 @@
 				AFE86AAF181EB226001E1827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFE86AB0181EB226001E1827 /* Build configuration list for PBXNativeTarget "BLEPeripheralTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +478,7 @@
 				AFE86AB2181EB226001E1827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

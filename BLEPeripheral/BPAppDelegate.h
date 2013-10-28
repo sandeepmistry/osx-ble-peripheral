@@ -8,7 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface BPAppDelegate : NSObject <NSApplicationDelegate>
+#import <IOBluetooth/IOBluetooth.h>
+
+@interface BPAppDelegate : NSObject <NSApplicationDelegate, CBPeripheralManagerDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 
