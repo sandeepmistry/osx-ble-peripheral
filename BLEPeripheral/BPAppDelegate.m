@@ -117,6 +117,7 @@
         [self.peripheralManager addService:self.service];
     } else {
         [peripheral stopAdvertising];
+        [peripheral removeAllServices];
     }
 }
 
