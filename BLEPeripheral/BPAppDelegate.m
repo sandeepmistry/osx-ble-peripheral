@@ -80,7 +80,7 @@
 
 @implementation BPAppDelegate
 
-//#define XPC_SPY 1
+// #define XPC_SPY 1
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -111,9 +111,17 @@
         NSData *zombie = [@"zombie" dataUsingEncoding:NSUTF8StringEncoding];
         CBMutableCharacteristic *characteristic = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:@"DDCA9B49-A6F5-462F-A89A-C2144083CA7F"] properties:CBCharacteristicPropertyRead value:zombie permissions:CBAttributePermissionsReadable];
         
+        NSData *ghost = [@"ghost" dataUsingEncoding:NSUTF8StringEncoding];
+        CBMutableCharacteristic *includedCharacteristic = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:@"A6282AC7-7FCA-4852-A2E6-1D69121FD44A"] properties:CBCharacteristicPropertyRead value:ghost permissions:CBAttributePermissionsReadable];
+        
+        CBMutableService *includedService = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:@"A5B288C3-FC55-491F-AF38-27D2F7D7BF25"] primary:NO];
+        includedService.characteristics = @[includedCharacteristic];
+        
         self.service = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:@"BD0F6577-4A38-4D71-AF1B-4E8F57708080"] primary:YES];
         self.service.characteristics = @[characteristic];
+        self.service.includedServices = @[includedService];
         
+        [self.peripheralManager addService:includedService];
         [self.peripheralManager addService:self.service];
     } else {
         [peripheral stopAdvertising];
